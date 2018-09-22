@@ -1,10 +1,19 @@
-<h1>Yo!</h1>
-  <p>Hello!</p>
-  <p><%= date %></p>
-  <p><%= 1 + 2 + 3 + 4 %></p>
-  <% if 1 == 1 %>
-    <h2>Równe!</h2>
-  <% end %>
-  <% [1,2,3,4].each do |element| %>
-  <p><%= element %></p>
-<% end %>
+<form action="/calculate" method="post">
+  <div class="form-group">
+    <label for="amount">Kwota</label>
+    <input name="amount" type="text" class="form-control" placeholder="Podaj kwotę" id="amount">
+  </div>
+
+  <div class="form-group">
+    <label for="percent">Procent</label>
+    <input name="percent" type="text" class="form-control" placeholder="Podaj procent. Dla 5% wpisz 5" id="percent">
+  </div>
+
+  <div class="form-group">
+    <label for="years">liczba lat</label>
+    <input name="years" type="text" class="form-control" placeholder="Podaj liczbę lat" id="years">
+  </div>
+  
+
+  <button type="submit" class="btn btn-default">Policz!</button>
+</form>
